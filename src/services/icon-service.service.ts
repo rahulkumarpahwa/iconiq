@@ -35,7 +35,6 @@ export class IconServiceService {
     return this.http.get<IconResponse>(
       environment.familyUrl + word + '&limit=7&productTier=free&style=solid',
       {
-        withCredentials: true,
         headers: {
           accept: 'application/json',
           'x-api-key': environment.apiKey,
@@ -48,7 +47,6 @@ export class IconServiceService {
     return this.http.get<IconResponse>(
       environment.familyUrl + family + '&limit=7&productTier=free&style=solid',
       {
-        withCredentials: true,
         headers: {
           accept: 'application/json',
           'x-api-key': environment.apiKey,
@@ -59,7 +57,6 @@ export class IconServiceService {
 
   getSvgUrl(hash: string) {
     return this.http.get(environment.svgUrl + hash + '/download/svg?size=48', {
-      withCredentials: true,
       headers: {
         'x-api-key': environment.apiKey,
       },

@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/v1/:path*",
-      "destination": "https://api.streamlinehq.com/v1/:path*"
+      "source": "/v1/(.*)",
+      "destination": "https://public-api.streamlinehq.com/v1/$1"
     },
     {
       "source": "/(.*)",

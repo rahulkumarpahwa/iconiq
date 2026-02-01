@@ -1,8 +1,13 @@
 {
   "/v1": {
-    "target": "https://api.streamlinehq.com",
-    "secure": false,
+    "target": "https://public-api.streamlinehq.com",
+    "secure": true,
     "changeOrigin": true,
-    "logLevel": "debug"
+    "logLevel": "debug",
+    "timeout": 60000,
+    "proxyTimeout": 60000,
+    "headers": {
+      "Connection": "keep-alive"
+    }
   }
 }
